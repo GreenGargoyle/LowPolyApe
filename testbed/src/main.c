@@ -1,6 +1,9 @@
 #include <core/logger.h>
 #include <core/asserts.h>
 
+// TODO: Test.
+#include <platform/platform.h>
+
 int main(void) 
 {
     LPAFATAL("A fatal message: %f", 3.14f);
@@ -10,7 +13,15 @@ int main(void)
     LPADEBUG("A debug message: %f", 3.14f);
     LPATRACE("A trace message: %f", 3.14f);
 
-    LPAASSERT(1 == 0);
-
+    platform_state state;
+    if (platform_startup(&state, "LowPolyApe Engine Testbed", 100, 100, 1280, 720))
+    {
+        while (TRUE)
+        {
+            platform_pump_messages(&state);
+        }
+    }
+    platform_shutdown(&state);
+    
     return 0;
 }
