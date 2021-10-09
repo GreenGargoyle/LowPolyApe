@@ -59,7 +59,8 @@
         "windowsx.h": "c",
         "vulkan_platform.h": "c",
         "renderer_frontend.h": "c",
-        "xiosbase": "c"
+        "xiosbase": "c",
+        "iosfwd": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
