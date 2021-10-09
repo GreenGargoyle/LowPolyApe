@@ -171,7 +171,7 @@ void platform_console_write(const char* message, u8 colour)
 {
     HANDLE console_handle = GetStdHandle(STD_OUTPUT_HANDLE);
     // FATAL, ERROR, WARN, INFO, DEBUG, TRACE.
-    static u8 levels[6] = {64, 4, 6, 2, 1, 8};
+    static u8 levels[6] = {64, 4, 6, 2, 7, 8};
     SetConsoleTextAttribute(console_handle, levels[colour]);
     OutputDebugStringA(message);
     u64 length = strlen(message);
