@@ -10,13 +10,13 @@ b8 game_initialise(game* game_inst)
 
 b8 game_update(game* game_inst, f32 delta_time)
 {
-    LPADEBUG("game_update() called.");
+    //LPADEBUG("game_update() called.");
     return TRUE;
 }
 
 b8 game_render(game* game_inst, f32 delta_time)
 {
-    LPADEBUG("game_render() called.");
+    //LPADEBUG("game_render() called.");
     return TRUE;
 }
 
